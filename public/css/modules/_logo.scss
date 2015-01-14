@@ -1,0 +1,5 @@
+.logo {
+  @extend %type-upcase;
+  @include type(14);
+  letter-spacing: 4px;
+}
