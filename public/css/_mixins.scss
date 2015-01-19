@@ -16,3 +16,10 @@
 @mixin line-height($size) {
   line-height: #{$size / 16}em;
 }
+
+@mixin no-underline {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

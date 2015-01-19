@@ -3,11 +3,15 @@ html, body {
 }
 
 body {
-  background: $background-color url(../images/background-hero.jpg) no-repeat bottom;
+  background: $background-color;
   background-size: cover;
   color: $text-color;
   @extend %type;
   min-width: 320px;
+  @media (max-width: $screen-sm-min) { 
+    background: url(../images/background-hero.jpg) no-repeat bottom;
+    background-size: cover;
+  }
 }
 
 .wrapper {
@@ -22,8 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: inherit;
+  @extend %type-heading;
   color: inherit;
   padding: 0;
 }
@@ -50,9 +53,6 @@ p {
 
 a {
   transition: color 0.3s, border-bottom-color 0.3s;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 // hide flash of unstyled text

@@ -2,4 +2,7 @@
   @extend %type-upcase;
   @include type(14);
   letter-spacing: 4px;
+  a {
+    @include no-underline;
+  }
 }
